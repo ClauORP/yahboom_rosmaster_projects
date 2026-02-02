@@ -46,7 +46,7 @@ def generate_launch_description():
     
     # Folders/filenames inside package share directories
     gazebo_models_path = 'models'
-    default_world_file = 'home_like.world'
+    default_world_file = 'rosmaster_home.world'
     gazebo_worlds_path = 'worlds'
     ros_gz_bridge_config_file_path = 'config/ros_gz_bridge.yaml'
 
@@ -59,7 +59,7 @@ def generate_launch_description():
 
     # Build absolute paths to files we need (bridge config, Gazebo models folder)
     default_ros_gz_bridge_config_file_path = os.path.join(pkg_share_gazebo, ros_gz_bridge_config_file_path)
-    gazebo_models_path = os.path.join(pkg_share_gazebo, gazebo_models_path)
+    gazebo_models_path = os.path.join(pkg_share_worlds, gazebo_models_path)
 
     # Launch configuration variables
     # LaunchConfiguration('something') reads the value of the launch argument "something"
@@ -139,7 +139,7 @@ def generate_launch_description():
 
     declare_x_cmd = DeclareLaunchArgument(
         name='x',
-        default_value='0.5',
+        default_value='1.0',
         description='x component of initial position, meters')
 
     declare_y_cmd = DeclareLaunchArgument(
