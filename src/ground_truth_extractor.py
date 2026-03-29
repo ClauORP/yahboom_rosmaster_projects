@@ -23,7 +23,7 @@ class GroundTruthExtractor(Node):
         self.declare_parameter('in_topic', '/world/p2_world/dynamic_pose/info')
         self.declare_parameter('out_topic', '/ground_truth_pose')
         self.declare_parameter('frame_id', 'world')
-        self.declare_parameter('pose_index', 1)
+        self.declare_parameter('pose_index', 4)
 
         in_topic = self.get_parameter('in_topic').value
         out_topic = self.get_parameter('out_topic').value
