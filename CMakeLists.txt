@@ -33,5 +33,6 @@ install(PROGRAMS
   src/ground_truth_extractor.py
   src/openloop_control.py
   src/ppa.py
+  src/frontier_exp.py
   DESTINATION lib/${PROJECT_NAME}
 )
